@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 93.75%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+}
+
+.nav__link {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #545454;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.about {
+  padding: 30px 0;
+  background-color: #F6F6F6;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.rooms__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooms__content {
+  width: 50%;
+}
