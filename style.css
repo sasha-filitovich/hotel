@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .header__wrapper {
@@ -107,6 +107,26 @@ h3 {
   /* color: #545454; */
 }
 
+.rooms__buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.button {
+  width: 190px;
+  height: 48px;
+  background: #F1CDB3;
+  border: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border-radius: 100px;
+}
+
 .reviews__container {
   display: flex;
   justify-content: space-around;
@@ -134,4 +154,56 @@ h3 {
   border-bottom-left-radius: 15px;
   color: #ffffff;
   font-size: 30px;
+}
+
+.contacts {
+  padding-bottom: 20px;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.phone::before {
+  content: '';
+  position: absolute;
+  background-image: url(../assets/png/phone.png);
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  top: 10px;
+}
+
+.email::before {
+  content: '';
+  position: absolute;
+  background-image: url(../assets/png/email.png);
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  top: 10px;
+}
+
+.address::before {
+  content: '';
+  position: absolute;
+  background-image: url(../assets/png/location.png);
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  top: 10px;
+}
+
+.contacts__item {
+  position: relative;
+  padding: 20px 0 20px 60px;
+  margin: 0;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: black;
 }
