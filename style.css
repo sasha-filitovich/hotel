@@ -8,6 +8,14 @@ body {
   overflow-x: hidden;
 }
 
+html.lock {
+  overflow: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1100px;
   width: 93.75%;
@@ -130,6 +138,7 @@ h3 {
   letter-spacing: 0.06em;
   color: #292929;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .reviews__container {
@@ -211,4 +220,62 @@ h3 {
   line-height: 23px;
   letter-spacing: 0.06em;
   color: black;
+}
+
+.pop-up {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
+  overflow-y: auto;
+}
+
+.pop-up.active {
+  display: flex;
+}
+
+.pop-up__wrapper {
+  width: 70.3%;
+  min-width: 800px;
+  margin: auto;
+  padding: 30px;
+  height: fit-content;
+  background-color: #fafafa;
+  border-radius: 10px;
+  position: relative;
+}
+
+.pop-up__main-part {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pop-up__main-img {
+  width: 50%;
+}
+
+.pop-up__button {
+  min-width: 52px;
+  height: 52px;
+  position: relative;
+  background: transparent;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pop-up__small-img {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pop-up__small-img > img {
+  width: 15%;
+  object-fit: cover;
 }
