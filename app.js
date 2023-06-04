@@ -1,4 +1,4 @@
-import rooms from '../rooms.js';
+import rooms from './rooms.js';
 //pop-up
 const html = document.querySelector('html');
 const buttonPhotos = document.querySelectorAll('.button_photos');
