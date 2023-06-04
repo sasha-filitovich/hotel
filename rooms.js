@@ -35,8 +35,8 @@ const rooms = [
       'assets/img/soba5/5_3.jpg',
       'assets/img/soba5/5_4.jpg',
       'assets/img/soba5/5_5.jpg',
+      'assets/img/soba5/5_6.jpg',
       'assets/img/soba5/5_7.jpg',
-      'assets/img/soba5/5_8.jpg',
     ],
   },
   {
