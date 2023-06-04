@@ -1,5 +1,5 @@
 import rooms from './rooms.js';
-//pop-up
+//pop-up code
 const html = document.querySelector('html');
 const buttonPhotos = document.querySelectorAll('.button_photos');
 const popup = document.querySelector('.pop-up');
