@@ -70,7 +70,6 @@ const rooms = [
       'assets/img/soba7/7_8.jpg',
       'assets/img/soba7/7_9.jpg',
       'assets/img/soba7/7_10.jpg',
-      'assets/img/soba7/7_11.jpg',
     ],
   },
   {

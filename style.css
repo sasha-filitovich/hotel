@@ -179,20 +179,39 @@ h3 {
   justify-content: space-around;
 }
 
+.contacts__container__phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contacts__container a {
+  display: block;
+  width: fit-content;
+}
+
 .phone::before {
   content: '';
   position: absolute;
-  background-image: url(assets/png/phone.png);
+  background-image: url(assets/icons/phone.png);
   width: 50px;
   height: 50px;
   left: 0px;
   top: 10px;
 }
 
+.messengers {
+  /* position: relative;
+  top: 6px;
+  left: 5px; */
+  /* margin-right: 5px; */
+  border-radius: 4px;
+}
+
 .email::before {
   content: '';
   position: absolute;
-  background-image: url(assets/png/email.png);
+  background-image: url(assets/icons/email.png);
   width: 50px;
   height: 50px;
   left: 0px;
@@ -202,7 +221,7 @@ h3 {
 .address::before {
   content: '';
   position: absolute;
-  background-image: url(assets/png/location.png);
+  background-image: url(assets/icons/location.png);
   width: 50px;
   height: 50px;
   left: 0px;
@@ -211,6 +230,7 @@ h3 {
 
 .contacts__item {
   position: relative;
+  width: fit-content;
   padding: 20px 0 20px 60px;
   margin: 0;
   font-family: 'Georgia';
@@ -241,6 +261,7 @@ h3 {
 .pop-up__wrapper {
   width: 70.3%;
   min-width: 800px;
+  max-height: 90%;
   margin: auto;
   padding: 30px;
   height: fit-content;
@@ -253,28 +274,43 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   margin-bottom: 30px;
 }
 
 .pop-up__main-img {
-  max-width: 50%;
-  max-height: 70vh;
+  max-width: 90%;
+  max-height: 90vh;
 }
 
 .pop-up__button {
-  min-width: 52px;
-  height: 52px;
-  position: relative;
-  background: transparent;
-  border: 2px solid #F1CDB3;
-  border-radius: 50%;
-  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  background-size: 32px 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+  filter: invert(100%);
   cursor: pointer;
 }
 
+.pop-up__button_left {
+  left: 20px;
+  background-image: url(assets/icons/slider-prev.svg);
+}
+
+.pop-up__button_right {
+  right: 20px;
+  background-image: url(assets/icons/slider-next.svg);
+}
+
 .pop-up__small-img {
-  display: flex;
-  justify-content: space-around;
+  display: none;
 }
 
 .pop-up__small-img > img {
@@ -285,6 +321,7 @@ h3 {
 .pop-up__button_close {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 16px;
   font-size: 30px;
+  color: white;
 }
