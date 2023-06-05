@@ -1,6 +1,33 @@
 import rooms from './rooms.js';
-//pop-up code
+// burger
 const html = document.querySelector('html');
+const burger = document.querySelector('.burger');
+const headerNav = document.querySelector('.header__nav');
+const navLinks = document.querySelectorAll('.nav__link');
+const overlay = document.querySelector('.overlay');
+// клик на иконку burger
+burger.addEventListener('click', function () {
+  headerNav.classList.toggle('active');
+  burger.classList.toggle('active');
+  overlay.classList.toggle('active');
+  html.classList.toggle('lock');
+  document.body.classList.toggle('lock');
+});
+// функция закрытия бургер-меню
+function burgerClose() {
+  headerNav.classList.remove('active');
+  burger.classList.remove('active');
+  overlay.classList.remove('active');
+  html.classList.remove('lock');
+  document.body.classList.remove('lock');
+}
+// клик на ссылки в меню
+for (let navLink of navLinks) {
+  navLink.addEventListener('click', burgerClose);
+}
+// клик на пространство вне меню
+overlay.addEventListener('click', burgerClose);
+// pop-up
 const buttonPhotos = document.querySelectorAll('.button_photos');
 const popup = document.querySelector('.pop-up');
 const popupMainImg = document.querySelector('.pop-up__main-img');
@@ -68,14 +95,14 @@ popupBtnLeft.addEventListener('click', () => {
     }
   }
 });
-//закрытие pop-up по крестику
+// закрытие pop-up по крестику
 popupBtnClose.addEventListener('click', function () {
   popupSmallImg.innerHTML = '';
   popup.classList.remove('active');
   html.classList.remove('lock');
   document.body.classList.remove('lock');
 });
-//закрытие pop-up при клике вне окна
+// закрытие pop-up при клике вне окна
 popup.addEventListener('click', (e) => {
   if (e.target === popup) {
     popupSmallImg.innerHTML = '';
