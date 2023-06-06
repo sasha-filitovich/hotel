@@ -1,4 +1,5 @@
 import rooms from './rooms.js';
+import reviews from './reviews.js';
 // burger
 const html = document.querySelector('html');
 const burger = document.querySelector('.burger');
@@ -111,3 +112,38 @@ popup.addEventListener('click', (e) => {
     document.body.classList.remove('lock');
   }
 });
+// переключение отзывов
+const reviewsBtnLeft = document.querySelector('.reviews__button_left');
+const reviewsBtnRight = document.querySelector('.reviews__button_right');
+const reviewsBlock = document.querySelectorAll('.reviews__block');
+let reviewNum = 0;
+// функция заполнения блока с отзывами
+const changeReviews = () => {
+  reviewsBlock.forEach((el) => {
+    el.innerHTML = `
+  <div>
+    <h3>${reviews[reviewNum].headline}</h3>
+    <p>${reviews[reviewNum].mainPart}</p>
+  </div>
+  <div>
+    <p>${reviews[reviewNum].name}</p>
+    <p>${reviews[reviewNum].date}</p>
+  </div>
+  <p class="mark">${reviews[reviewNum].mark}</p>`;
+    if (reviewNum === reviews.length - 1) reviewNum = 0;
+    else reviewNum++;
+  });
+};
+// клик на правую стрелку
+reviewsBtnRight.addEventListener('click', () => {
+  changeReviews();
+});
+// клик на левую стрелку
+reviewsBtnLeft.addEventListener('click', () => {
+  if (reviewNum === 0) reviewNum = reviews.length - 6;
+  else if (reviewNum === 3) reviewNum = reviews.length - 3;
+  else reviewNum -= 6;
+  changeReviews();
+});
+// заполнение блока с отзывами при загрузке страницы
+changeReviews();

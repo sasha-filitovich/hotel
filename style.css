@@ -17,13 +17,12 @@ body.lock {
 }
 
 .wrapper {
-  /* max-width: 1100px; */
   width: 93.75%;
   margin: 0 auto;
 }
 
 .header {
-  padding: 20px 0;
+  padding: 5px 0;
 }
 
 .header__wrapper {
@@ -34,13 +33,6 @@ body.lock {
 
 .logo {
   position: relative;
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 35px;
-  letter-spacing: 0.06em;
-  color: #545454;
   z-index: 3;
 }
 
@@ -54,9 +46,10 @@ body.lock {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 24px;
-  color: #545454;
+  /* color: #545454; */
+  color: #692c1a;
   cursor: pointer;
 }
 
@@ -222,6 +215,7 @@ h3 {
 .reviews__container {
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 
 .reviews__block {
@@ -234,6 +228,16 @@ h3 {
   background-color: #FAFAFA;
   border-radius: 15px;;
   text-align: justify;
+}
+
+.reviews__button_left {
+  left: -10px;
+  background-image: url(assets/icons/slider-prev.svg);
+}
+
+.reviews__button_right {
+  right: -18px;
+  background-image: url(assets/icons/slider-next.svg);
 }
 
 .mark {
@@ -340,9 +344,8 @@ h3 {
 }
 
 .pop-up__wrapper {
-  width: 70.3%;
-  min-width: 800px;
-  max-height: 90%;
+  width: 70%;
+  max-height: 85%;
   margin: auto;
   padding: 30px;
   height: fit-content;
@@ -353,18 +356,17 @@ h3 {
 
 .pop-up__main-part {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .pop-up__main-img {
   max-width: 90%;
-  max-height: 90vh;
+  max-height: 85vh;
 }
 
-.pop-up__button {
+.button-arrow {
   position: absolute;
   top: 50%;
   width: 32px;
@@ -381,7 +383,7 @@ h3 {
 }
 
 .pop-up__button_left {
-  left: 20px;
+  left: 25px;
   background-image: url(assets/icons/slider-prev.svg);
 }
 
@@ -418,14 +420,19 @@ hr {
   .rooms__block {
     margin: 30px 0;
   }
+
+  .pop-up__wrapper {
+    width: 85%;
+    max-height: 90%;
+  }
+
+  .pop-up__main-img {
+    max-width: 90%;
+    max-height: 90vh;
+  }
 }
 
 @media (max-width: 885px) {
-  /* .about__img {
-    width: 46%;
-    min-width: 180px;
-  } */
-
   .rooms__block {
     flex-direction: column;
     padding-right: 0;
@@ -460,9 +467,37 @@ hr {
     width: 60%;
     min-width: 310px;
   }
+
+  .pop-up__wrapper {
+    padding: 30px 10px;
+  }
+
+  .pop-up__button_left {
+    left: 10px;
+  }
+  
+  .pop-up__button_right {
+    right: 2px;
+  }
+}
+
+@media (max-width: 735px) {
+  .reviews__container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .reviews__block {
+    width: 85%;
+  }
 }
 
 @media (max-width: 650px) {
+  .logo {
+    width: 25%;
+  }
+
   .contacts__container {
     flex-direction: column;
     align-items: center;
@@ -489,9 +524,9 @@ hr {
     position: absolute;
     width: 30px;
     height: 8px;
-    border-top: 2px solid #545454;
-    border-bottom: 2px solid #545454;
-    transition: transform 0.5s, border-color 0.5s;
+    border-top: 2px solid #692c1a;
+    border-bottom: 2px solid #692c1a;
+    transition: transform 0.5s;
   }
 
   .burger::after {
@@ -499,22 +534,20 @@ hr {
     position: absolute;
     width: 30px;
     height: 2px;
-    background-color: #545454;
+    background-color: #692c1a;
     top: 20px;
-    transition: transform 0.5s, background-color 0.5s;
+    transition: transform 0.5s;
   }
 
   .burger.active::before {
     top: 8px;
     right: 3px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid rgb(84, 84, 84, 0);
+    border-bottom: none;
     transform: rotate(45deg);
   }
 
   .burger.active::after {
     top: 9px;
-    background-color: black;
     transform: rotate(-45deg);
   }
 
@@ -540,13 +573,13 @@ hr {
   }
 
   .nav > li {
-    margin-bottom: 41px;
+    margin-bottom: 30px;
     text-align: center;
   }
 
   .nav__link {
     padding-bottom: 7px;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 51px;
   }
 
@@ -573,6 +606,10 @@ hr {
 }
 
 @media (max-width: 555px) {
+  .logo {
+    width: 35%;
+  }
+
   .button {
     width: 160px;
   }
@@ -585,6 +622,31 @@ hr {
 
   .rooms__content {
     width: 88%;
+  }
+
+  .reviews__button_left {
+    top: 100%;
+    left: 35%;
+    z-index: 1;
+  }
+  
+  .reviews__button_right {
+    top: 100%;
+    right: 35%;
+  }
+
+  .pop-up__wrapper {
+    width: 95%;
+    max-height: 85%;
+    padding: 30px 0;
+  }
+
+  .pop-up__button_left {
+    left: 2px;
+  }
+  
+  .pop-up__button_right {
+    right: -6px;
   }
 }
 
@@ -601,5 +663,13 @@ hr {
 
   iframe {
     width: 100%;
+  }
+
+  .pop-up__wrapper {
+    width: 100%;
+  }
+
+  .pop-up__main-img {
+    max-width: 95%;
   }
 }

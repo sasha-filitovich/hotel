@@ -1,5 +1,29 @@
 const reviews = [
   {
+    headline: 'Fabulous',
+    mainPart:
+      'The hosts made us welcome and enjoy our stay from day one. They are very knowledgeable about the area and the nearest ski resorts in Italy and Austria. The location of the hotel is perfect, overlooking the Kranjska gora, across the road from a grocery store and many restaurants nearby. Secure free parking, dry ski room and the sauna is a great bonus to make the stay ever so relaxing. Highly recommended.',
+    name: 'Mad, Great Britain',
+    date: 'January 12, 2023',
+    mark: '10',
+  },
+  {
+    headline: 'Perfect',
+    mainPart:
+      'Great stay at Pri Marusi. A small hotel in a nice location. Excellent hosts - so helpful and genuine. Near to a beautiful easy walk to the lake. Nice restaurants in walking distance.',
+    name: 'Jan, Australia',
+    date: 'September 10, 2022',
+    mark: '9',
+  },
+  {
+    headline: 'Fabulous',
+    mainPart:
+      'Good location, parking space provided. Room was spacious and clean. Breakfast was very good. Great hosts, welcoming and ready to help. Staying at this place was a very pleasant expirience.',
+    name: 'Ivan, Croatia',
+    date: 'February 6, 2023',
+    mark: '10',
+  },
+  {
     headline: 'Perfect',
     mainPart:
       'Perfectly clean apartment, feels new, friendly and welcoming owner, very good breakfast. Both kitchen and bathroom were quite small in our apartment, there could be more equipment in kitchen (e.g. could find only forks and spoons, but no dining knives).',
@@ -139,3 +163,4 @@ const reviews = [
     mark: '9',
   },
 ];
+export default reviews;
