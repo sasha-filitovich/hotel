@@ -18,6 +18,7 @@ body.lock {
 
 .wrapper {
   width: 93.75%;
+  max-width: 1340px;
   margin: 0 auto;
 }
 
@@ -28,7 +29,9 @@ body.lock {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 36px;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -36,8 +39,14 @@ body.lock {
   z-index: 3;
 }
 
+.header__nav-lang {
+  display: flex;
+  gap: 30px;
+}
+
 .nav {
   display: flex;
+  padding: 0;
   list-style: none;
   gap: 36px;
 }
@@ -48,9 +57,66 @@ body.lock {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  /* color: #545454; */
   color: #692c1a;
   cursor: pointer;
+}
+
+.flag {
+  cursor: pointer;
+}
+
+.languages {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 80%;
+  width: 15%;
+  padding: 0 10px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  opacity: 0.9;
+  box-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.languages > p {
+  position: relative;
+  margin: 10px 0 10px 30px;
+  padding-left: 10px;
+  color:#692c1a;
+  cursor: pointer;
+}
+
+.english::before, .german::before, .slovenia::before {
+  content: '';
+  position: absolute;
+  background-size: contain;
+}
+
+.english::before {
+  background-image: url(assets/icons/english.svg);
+  width: 30px;
+  height: 16px;
+  left: -30px;
+}
+
+.german::before {
+  background-image: url(assets/icons/germany.svg);
+  width: 30px;
+  height: 16px;
+  left: -30px;
+}
+
+.slovenia::before {
+  background-image: url(assets/icons/slovenia.svg);
+  width: 30px;
+  height: 16px;
+  left: -30px;
+}
+
+.languages__line {
+  width: 100%;
+  height: 1px;
+  background-color:#e5e5e5;
 }
 
 .burger {
@@ -80,10 +146,10 @@ a {
 }
 
 .about__content {
-  width: 50%;
+  width: 53%;
 }
 
-h2 {
+h1, h2 {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -92,6 +158,11 @@ h2 {
   letter-spacing: 0.06em;
   color: #545454;
   text-align: center;
+}
+
+h1 {
+  color: #692c1a;
+  margin-top: 0;
 }
 
 p {
@@ -142,7 +213,8 @@ h3 {
   margin: 20px 0;
 }
 
-.rooms__person, .rooms__square, .rooms__breakfast, .rooms__kitchen, .rooms__balcony {
+.rooms__person, .rooms__square, .rooms__breakfast, .rooms__kitchen, .rooms__balcony, 
+.rooms__person_4 {
   position: relative;
   left: 40px;
   margin: 0;
@@ -155,7 +227,7 @@ h3 {
 }
 
 .rooms__person::before, .rooms__square::before, .rooms__breakfast::before, 
-.rooms__kitchen::before, .rooms__balcony::before {
+.rooms__kitchen::before, .rooms__balcony::before, .rooms__person_4::before {
   content: '';
   position: absolute;
   background-size: contain;
@@ -167,6 +239,10 @@ h3 {
 
 .rooms__person::before {
   background-image: url(assets/icons/people.svg);
+}
+
+.rooms__person_4::before {
+  background-image: url(assets/icons/people4.png);
 }
 
 .rooms__square::before {
@@ -182,8 +258,6 @@ h3 {
 
 .rooms__kitchen::before {
   background-image: url(assets/icons/kitchen.svg);
-  /* width: 28px;
-  height: 28px; */
 }
 
 .rooms__balcony::before {
@@ -513,6 +587,9 @@ hr {
   .burger {
     display: inline-block;
     position: relative;
+    /* justify-content: end;
+    flex: auto; */
+    order: 2;
     width: 30px;
     height: 22px;
     z-index: 2;
