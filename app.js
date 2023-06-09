@@ -147,3 +147,28 @@ reviewsBtnLeft.addEventListener('click', () => {
 });
 // заполнение блока с отзывами при загрузке страницы
 changeReviews();
+// изменение языка
+const flag = document.querySelector('.flag');
+const languages = document.querySelector('.languages');
+const languagesArr = languages.querySelectorAll('p');
+flag.addEventListener('click', () => {
+  languages.classList.toggle('active');
+});
+// клик на язык в форме
+languagesArr.forEach((el) => {
+  el.addEventListener('click', () => {
+    const elClass = el.className;
+    flag.src = `assets/icons/${elClass}.svg`;
+    languages.classList.remove('active');
+  });
+});
+// клик на область вне окна с языками, чтобы закрыть его
+document.body.addEventListener('click', (e) => {
+  if (
+    languages.classList.contains('active') &&
+    !e.target.classList.contains('languages') &&
+    !e.target.classList.contains('flag')
+  ) {
+    languages.classList.remove('active');
+  }
+});
