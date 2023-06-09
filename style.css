@@ -62,12 +62,19 @@ body.lock {
   cursor: pointer;
 }
 
+.nav li {
+  transition: transform 0.5s;
+}
+
+.nav li:hover {
+  transform: scale(1.2);
+}
+
 .flag {
   cursor: pointer;
 }
 
 .languages {
-  /* display: none; */
   position: absolute;
   right: 0;
   top: 80%;
@@ -77,14 +84,14 @@ body.lock {
   padding: 0 10px;
   border-radius: 3px;
   background-color: #f9f9f9;
-  opacity: 0;
+  overflow: hidden;
+  opacity: 0.9;
   box-shadow: 1px 1px 1px rgb(255, 255, 255);
-  transition: height 0.5s, opacity 0.4s;
+  transition: height 0.5s;
 }
 
 .languages.active {
   height: 118px;
-  opacity: 0.9;
 }
 
 .languages > p {
@@ -297,6 +304,12 @@ h3 {
   letter-spacing: 0.06em;
   color: #292929;
   border-radius: 20px;
+  transition: background-color 0.5s;
+}
+
+.button:hover {
+  background-color: #ffddc4;
+  transition: all 0.5s;
 }
 
 .button_photos {
