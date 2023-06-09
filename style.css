@@ -159,6 +159,7 @@ a {
 }
 
 h1, h2 {
+  margin-top: 0;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -184,6 +185,10 @@ p {
 .about__img {
   width: 43%;
   min-width: 380px;
+}
+
+.rooms, .contacts {
+  padding-top: 20px;
 }
 
 .rooms__block {
@@ -291,8 +296,56 @@ h3 {
   line-height: 22px;
   letter-spacing: 0.06em;
   color: #292929;
-  border-radius: 100px;
+  border-radius: 20px;
+}
+
+.button_photos {
   cursor: pointer;
+}
+
+.rooms__select {
+  transition: all 0.5s;
+}
+
+.rooms__select.active {
+  height: 205px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.rooms__select > p {
+  text-align: center;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+  height: 0px;
+  background-color: #ffe9da;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: height 0.5s, padding 0.5s;
+  overflow: hidden;
+}
+
+.select.active {
+  height: 155px;
+  padding: 8px 0;
+}
+
+.select p {
+  padding: 10px 0 0 40px;
+  margin: 0;
+  color: #292929;
+}
+
+.select__line {
+  width: 80%;
+  height: 1px;
+  margin: 5px auto 0;
+  background-color: #9a9a9a;
 }
 
 .reviews__container {
@@ -752,6 +805,10 @@ hr {
   .button {
     width: 230px;
     height: 35px;
+  }
+
+  .rooms__select > p {
+    padding: 6px;
   }
 
   iframe {

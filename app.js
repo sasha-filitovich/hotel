@@ -172,3 +172,11 @@ document.body.addEventListener('click', (e) => {
     languages.classList.remove('active');
   }
 });
+//
+const btnsContact = document.querySelectorAll('.rooms__select');
+btnsContact.forEach((el) => {
+  el.querySelector('p').addEventListener('click', () => {
+    el.classList.toggle('active');
+    el.querySelector('.select').classList.toggle('active');
+  });
+});
