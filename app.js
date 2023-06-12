@@ -1,5 +1,6 @@
 import rooms from './rooms.js';
 import reviews from './reviews.js';
+import translate from './translate.js';
 // burger
 const html = document.querySelector('html');
 const burger = document.querySelector('.burger');
@@ -151,15 +152,35 @@ changeReviews();
 const flag = document.querySelector('.flag');
 const languages = document.querySelector('.languages');
 const languagesArr = languages.querySelectorAll('p');
+const roomsTitle = document.querySelector('.rooms').querySelectorAll('h3');
+const roomsDescription = document.querySelectorAll('.rooms__description');
+const aboutContent = document.querySelector('.about__content');
 flag.addEventListener('click', () => {
   languages.classList.toggle('active');
 });
-// клик на язык в форме
+// клик на язык в форме, чтобы изменить его и закрыть форму
 languagesArr.forEach((el) => {
   el.addEventListener('click', () => {
     const elClass = el.className;
-    flag.src = `assets/icons/${elClass}.svg`;
-    languages.classList.remove('active');
+    flag.src = `assets/icons/${elClass}.svg`; // смена флага
+    languages.classList.remove('active'); // закрытие формы
+    aboutContent.innerHTML = translate[elClass].about__content;
+    roomsTitle.forEach((item) => {
+      for (let room of rooms) {
+        if (item.parentNode.classList.contains(room.number)) {
+          item.textContent = room.title[elClass];
+          break;
+        }
+      }
+    });
+    roomsDescription.forEach((item) => {
+      for (let room of rooms) {
+        if (item.parentNode.classList.contains(room.number)) {
+          item.textContent = room.description[elClass];
+          break;
+        }
+      }
+    });
   });
 });
 // клик на область вне окна с языками, чтобы закрыть его
@@ -172,7 +193,8 @@ document.body.addEventListener('click', (e) => {
     languages.classList.remove('active');
   }
 });
-//
+
+// клик по кнопке contact us
 const btnsContact = document.querySelectorAll('.rooms__select');
 btnsContact.forEach((el) => {
   el.querySelector('p').addEventListener('click', () => {

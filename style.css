@@ -147,12 +147,12 @@ a {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 1340px;;
+  max-width: 1340px;
 }
 
 .about, .reviews {
   padding: 30px 0;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 .about__wrapper {
