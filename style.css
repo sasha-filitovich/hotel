@@ -71,6 +71,7 @@ body.lock {
 }
 
 .flag {
+  margin: auto 0;
   cursor: pointer;
 }
 
@@ -91,7 +92,7 @@ body.lock {
 }
 
 .languages.active {
-  height: 118px;
+  height: 157px;
 }
 
 .languages > p {
@@ -102,31 +103,30 @@ body.lock {
   cursor: pointer;
 }
 
-.english::before, .germany::before, .slovenia::before {
+.english::before, .germany::before, .slovenia::before, .italy::before {
   content: '';
   position: absolute;
   background-size: contain;
+  width: 30px;
+  height: 16px;
+  left: -30px;
 }
 
 .english::before {
   background-image: url(assets/icons/english.svg);
-  width: 30px;
-  height: 16px;
-  left: -30px;
 }
 
 .germany::before {
   background-image: url(assets/icons/germany.svg);
-  width: 30px;
-  height: 16px;
-  left: -30px;
 }
 
 .slovenia::before {
   background-image: url(assets/icons/slovenia.svg);
-  width: 30px;
-  height: 16px;
-  left: -30px;
+}
+
+.italy::before {
+  background-image: url(assets/icons/italy.svg);
+  width: 28px;
 }
 
 .languages__line {

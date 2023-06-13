@@ -1,6 +1,17 @@
 import rooms from './rooms.js';
 import reviews from './reviews.js';
 import translate from './translate.js';
+// добавление кнопки contact us в секции rooms
+const btnsContact = document.querySelectorAll('.rooms__select');
+btnsContact.forEach((el) => {
+  el.innerHTML = `<p>Contact us</p>
+<div class="select">
+  <a href="mailto:marusial@yahoo.com?subject=Double Room"><p>Email</p></a><hr class="select__line">
+  <a href="https://wa.me/38630410766"><p>Whatsapp</p></a><hr class="select__line">
+  <a href="viber://chat?number=%2B38630410766"><p>Viber</p></a><hr class="select__line">
+  <a href="https://t.me/+38630410766"><p>Telegram</p></a><hr class="select__line">
+</div>`;
+});
 // burger
 const html = document.querySelector('html');
 const burger = document.querySelector('.burger');
@@ -195,7 +206,6 @@ document.body.addEventListener('click', (e) => {
 });
 
 // клик по кнопке contact us
-const btnsContact = document.querySelectorAll('.rooms__select');
 btnsContact.forEach((el) => {
   el.querySelector('p').addEventListener('click', () => {
     el.classList.toggle('active');
