@@ -14,6 +14,7 @@ const rooms = [
     title: {
       english: 'Double Room with terrace',
       germany: 'Doppelzimmer mit der Terrasse',
+      slovenia: 'Double Room with terrace',
       italy: 'Camera Matrimoniale con terrazzo',
     },
     description: {
@@ -43,6 +44,7 @@ const rooms = [
     title: {
       english: 'Comfort Room',
       germany: 'Komfortzimmer',
+      slovenia: 'Comfort Room',
       italy: 'Camera Comfort',
     },
     description: {
@@ -71,6 +73,7 @@ const rooms = [
     title: {
       english: 'Double Room',
       germany: 'Doppelzimmer',
+      slovenia: 'Double Room',
       italy: 'Camera Matrimoniale',
     },
     description: {
@@ -103,6 +106,7 @@ const rooms = [
     title: {
       english: 'Two bedroom Apartment',
       germany: 'Zweibettzimmer Wohnung',
+      slovenia: 'Two bedroom Apartment',
       italy: 'Appartamento con due camere da letto',
     },
     description: {
@@ -135,6 +139,7 @@ const rooms = [
     title: {
       english: 'Double Room with Mountain View',
       germany: 'Doppelzimmer mit Bergaussicht',
+      slovenia: 'Double Room with Mountain View',
       italy: 'Camera Matrimoniale con Vista Montagna',
     },
     description: {
@@ -165,6 +170,7 @@ const rooms = [
     title: {
       english: 'Quadruple Room with terrace',
       germany: 'Vierbettzimmer mit der Terrasse',
+      slovenia: 'Quadruple Room with terrace',
       italy: 'Camera Quadrupla con terrazzo',
     },
     description: {
