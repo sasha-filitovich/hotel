@@ -166,6 +166,12 @@ const languagesArr = languages.querySelectorAll('p');
 const roomsTitle = document.querySelector('.rooms').querySelectorAll('h3');
 const roomsDescription = document.querySelectorAll('.rooms__description');
 const aboutContent = document.querySelector('.about__content');
+const h2 = document.querySelectorAll('h2');
+const breakfast = document.querySelectorAll('.rooms__breakfast');
+const person = document.querySelectorAll('.rooms__person');
+const person4 = document.querySelectorAll('.rooms__person_4');
+const kitchen = document.querySelectorAll('.rooms__kitchen');
+const balcony = document.querySelectorAll('.rooms__balcony');
 flag.addEventListener('click', () => {
   languages.classList.toggle('active');
 });
@@ -175,7 +181,8 @@ languagesArr.forEach((el) => {
     const elClass = el.className;
     flag.src = `assets/icons/${elClass}.svg`; // смена флага
     languages.classList.remove('active'); // закрытие формы
-    aboutContent.innerHTML = translate[elClass].about__content;
+    aboutContent.innerHTML = translate[elClass].about__content; //перевод текста в секции about
+    // перевод названий комнат
     roomsTitle.forEach((item) => {
       for (let room of rooms) {
         if (item.parentNode.classList.contains(room.number)) {
@@ -184,12 +191,44 @@ languagesArr.forEach((el) => {
         }
       }
     });
+    // перевод описания комнат
     roomsDescription.forEach((item) => {
       for (let room of rooms) {
         if (item.parentNode.classList.contains(room.number)) {
           item.textContent = room.description[elClass];
           break;
         }
+      }
+    });
+    h2.forEach((item, index) => {
+      item.textContent = translate[elClass].h2[index];
+    });
+    navLinks.forEach((item, index) => {
+      item.textContent = translate[elClass].nav__link[index];
+    });
+    buttonPhotos.forEach((item) => {
+      item.textContent = translate[elClass].button_photos;
+    });
+    btnsContact.forEach((item) => {
+      item.querySelector('p').textContent = translate[elClass].rooms__select;
+    });
+    breakfast.forEach((item) => {
+      item.textContent = translate[elClass].rooms__breakfast;
+    });
+    person.forEach((item) => {
+      item.textContent = '2 ' + translate[elClass].rooms__person;
+    });
+    person4.forEach((item) => {
+      item.textContent = '4 ' + translate[elClass].rooms__person;
+    });
+    kitchen.forEach((item) => {
+      item.textContent = translate[elClass].rooms__kitchen;
+    });
+    balcony.forEach((item) => {
+      if (item.textContent.slice(0, 1) !== 't') {
+        item.textContent = translate[elClass].rooms__balcony;
+      } else {
+        item.textContent = translate[elClass].terrace;
       }
     });
   });
