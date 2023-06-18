@@ -13,7 +13,7 @@ const translate = {
     terrace: 'terrace',
   },
   germany: {
-    about__content: `<h1>Welcome to Pri&nbsp;Marusi</h1>
+    about__content: `<h1>Herzlich Willkommen im Pri&nbsp;Marusi</h1>
     <p>Das Gasthaus Pri Marusi befindet sich auf dem populären touristischen Kurort 
     Kranska-Gora 450 Meter vom Zentrum entfernt. Kranska-Gora liegt an der Grenze 
     des Naturschutzgebietes von Slowenien - Triglav National Park. Im Park stehen 
@@ -34,15 +34,15 @@ const translate = {
     aufgetragen. In Kranjska Gora funktionieren mehr als 20 Restaurants, Cafés und 
     Bars, wo man verschiedene Gerichte der slowenischen, serbischen und 
     italienischen Küche probieren kann.</p>`,
-    h2: ['Our Rooms', 'Reviews', 'Contacts'],
-    nav__link: ['About us', 'Rooms', 'Reviews', 'Contacts'],
-    button_photos: 'More photos',
-    rooms__select: 'Contact us',
-    rooms__breakfast: 'breakfast included',
-    rooms__person: 'people',
-    rooms__kitchen: 'kitchen',
-    rooms__balcony: 'balcony',
-    terrace: 'terrace',
+    h2: ['Unsere Zimmer', 'Bewertungen', 'Kontakt'],
+    nav__link: ['Über uns', 'Zimmer', 'Bewertungen', 'Kontakt'],
+    button_photos: 'Mehr Fotos',
+    rooms__select: 'Kontakt',
+    rooms__breakfast: 'frühstück inklusive',
+    rooms__person: 'personen',
+    rooms__kitchen: 'küche',
+    rooms__balcony: 'balkon',
+    terrace: 'terrasse',
   },
   slovenia: {
     about__content: `<h1>Welcome to Pri&nbsp;Marusi</h1>
