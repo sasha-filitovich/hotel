@@ -566,6 +566,56 @@ hr {
   border: none;
 }
 
+.cookies {
+  display: flex;
+  align-items: end;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(58, 58, 58, 0.5);
+  transition: all 0.5s;
+}
+
+.cookies.close {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cookies__wrapper {
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  background-color: #f6f6f6;
+}
+
+.cookies__accept, .cookies__no {
+  width: 130px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.cookies__accept {
+  margin-right: 15px;
+  background-color: rgb(0, 189, 0);
+}
+
+.cookies__accept:hover {
+  background-color: rgb(1, 224, 1);
+}
+
+.cookies__no {
+  background-color: #c8c8c8;
+}
+
+.cookies__no:hover {
+  background-color: #dedede;
+}
+
 @media (max-width: 1130px) {
   .rooms__block {
     margin: 30px 0;
