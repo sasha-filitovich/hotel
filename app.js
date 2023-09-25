@@ -252,31 +252,37 @@ btnsContact.forEach((el) => {
   });
 });
 
-// кнопки в модальном окне о cookies
+// модальное окно о cookies
 const cookies = document.querySelector('.cookies');
 const contactsContainer = document.querySelector('.contacts__container');
-html.classList.add('lock');
-document.body.classList.add('lock');
+const mapCode = `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2747.0824836755837!2d13.787124687707733!3d46.48667912952477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a7dd7f6baf8fd%3A0x8d960940f424f952!2sRooms%20%22Pri%20Marusi%22!5e0!3m2!1sru!2str!4v1695656874119!5m2!1sru!2str" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+// поиск cookiesValue в local storage
+window.addEventListener('load', () => {
+  if (localStorage.getItem('consent') === 'yes') {
+    contactsContainer.insertAdjacentHTML('beforeEnd', mapCode);
+  } else if (localStorage.getItem('consent') === 'no') {
+    contactsContainer.insertAdjacentHTML(
+      'beforeEnd',
+      `<a href="https://www.google.com/maps/place/Rooms+%22Pri+Marusi%22/@46.486162,13.7800544,15z/data=!4m9!3m8!1s0x477a7dd7f6baf8fd:0x8d960940f424f952!5m2!4m1!1i2!8m2!3d46.4867529!4d13.7898823!16s%2Fg%2F11nmhx2bb0?hl=ru&entry=ttu"><img src="assets/img/map.png" width="350" height="200" alt="hotel on the google map"></a>`
+    );
+  } else {
+    cookies.classList.remove('close');
+    html.classList.add('lock');
+    document.body.classList.add('lock');
+  }
+});
+
 // нажатие кнопки accept
 document.querySelector('.cookies__accept').addEventListener('click', () => {
+  localStorage.setItem('consent', 'yes');
   cookies.classList.add('close');
   html.classList.remove('lock');
   document.body.classList.remove('lock');
-  contactsContainer.insertAdjacentHTML(
-    'beforeEnd',
-    `<iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10988.315032869303!2d13.7898823!3d46.4867529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a7dd7f6baf8fd%3A0x8d960940f424f952!2sRooms%20%22Pri%20Marusi%22!5e0!3m2!1sru!2str!4v1685789651401!5m2!1sru!2str"
-      width="350"
-      height="200"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>`
-  );
+  contactsContainer.insertAdjacentHTML('beforeEnd', mapCode);
 });
 // нажатие кнопки didn't accept
 document.querySelector('.cookies__no').addEventListener('click', () => {
+  localStorage.setItem('consent', 'no');
   cookies.classList.add('close');
   html.classList.remove('lock');
   document.body.classList.remove('lock');
