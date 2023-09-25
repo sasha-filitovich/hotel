@@ -291,3 +291,11 @@ document.querySelector('.cookies__no').addEventListener('click', () => {
     `<a href="https://www.google.com/maps/place/Rooms+%22Pri+Marusi%22/@46.486162,13.7800544,15z/data=!4m9!3m8!1s0x477a7dd7f6baf8fd:0x8d960940f424f952!5m2!4m1!1i2!8m2!3d46.4867529!4d13.7898823!16s%2Fg%2F11nmhx2bb0?hl=ru&entry=ttu"><img src="assets/img/map.png" width="350" height="200" alt="hotel on the google map"></a>`
   );
 });
+//
+let vh = window.innerHeight;
+cookies.style.height = vh + 'px';
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight;
+  cookies.style.height = vh + 'px';
+  console.log(cookies.style.height);
+});
