@@ -1,0 +1,18 @@
+main {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
